@@ -1,0 +1,51 @@
+swarmui:
+    base_path: /content/SwarmUI/Models
+    is_default: true
+    checkpoints: |
+       Stable-Diffusion
+    vae: |
+       VAE
+    loras: |
+       Lora
+       LyCORIS
+    upscale_models: |
+       ESRGAN
+       RealESRGAN
+       SwinIR
+       upscale-models
+       upscale_models
+    embeddings: |
+       Embeddings
+       embeddings
+    hypernetworks: |
+       hypernetworks
+    controlnet: |
+       controlnet
+       ControlNet
+    clip: |
+       clip
+       CLIP
+    clip_vision: |
+       clip_vision
+    unet: |
+       unet
+    diffusion_models: |
+       diffusion_models
+    gligen: |
+       gligen
+    ipadapter: |
+       ipadapter
+    yolov8: |
+       yolov8
+    tensorrt: |
+       tensorrt
+    clipseg: |
+       clipseg
+    style_models: |
+       style_models
+
+# Explicitly separate the _nodes list to prevent it from being is_default
+swarmui_nodes:
+    custom_nodes: |
+       /content/SwarmUI/src/BuiltinExtensions/ComfyUIBackend/DLNodes
+       /content/SwarmUI/src/BuiltinExtensions/ComfyUIBackend/ExtraNodes
