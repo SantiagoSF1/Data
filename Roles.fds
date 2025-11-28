@@ -1,0 +1,442 @@
+owner:
+	#How many directories deep a user's custom OutPath can be.
+	#Default is 5.
+	#This is just a minor protection to avoid filesystem corruption. Higher values are perfectly fine in most cases.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxOutPathDepth: 5
+	#What models are allowed, as a list of prefixes.
+	#For example 'sdxl/' allows only models in the SDXL folder.
+	#Or, 'sdxl/,flux/' allows models in the SDXL or Flux folders.
+	#If empty, no whitelist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add whitelist entries together.
+	ModelWhitelist:
+	#What models are forbidden, as a list of prefixes.
+	#For example 'sdxl/' forbids models in the SDXL folder.
+	#Or, 'sdxl/,flux/' forbids models in the SDXL or Flux folders.
+	#If empty, no blacklist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add blacklist entries together.
+	ModelBlacklist:
+	#Generic permission flags. '*' means all (admin).
+	#Default is all.
+	PermissionFlags:
+	- *
+	- configure_roles
+	- restart
+	- edit_model_metadata
+	- param_backend_type
+	- param_backend_id
+	- install
+	- use_tokenizer
+	- comfy_read_workflows
+	- interrupt_others
+	- download_models
+	- fundamental_model_access
+	- view_server_tab
+	- comfy_backend_generate
+	- user_star_images
+	- comfy_dynamic_custom_workflows
+	- manage_presets
+	- view_backends_list
+	- comfy_edit_workflows
+	- user_delete_image
+	- view_image_history
+	- server_debug_message
+	- add_remove_backends
+	- comfy_stored_custom_workflows
+	- shutdown
+	- admin_debug
+	- local_image_folder
+	- fundamental_generate_tab_access
+	- param_video
+	- delete_models
+	- view_others_outputs
+	- control_model_refresh
+	- read_server_settings
+	- toggle_backends
+	- gridgen_generate_grids
+	- restart_backends
+	- manage_users
+	- basic_image_generation
+	- automated_control
+	- comfy_direct_calls
+	- read_user_settings
+	- extra_loras
+	- edit_user_settings
+	- load_models_now
+	- edit_wildcards
+	- install_features
+	- param_controlnet
+	- read_server_info_panels
+	- gridgen_save_grids
+	- edit_params
+	- edit_server_settings
+	- pickle2safetensors
+	- gridgen_read_grids
+	- view_logs
+	- reset_metadata
+	- control_mem_clean
+	- manage_extensions
+	- fundamental
+	- model_params
+	- create_tensorrt
+	- edit_backends
+	- imagebatcher_use_image_batcher
+	- scorersext_use_scorers
+	#How many images this user can have actively generating at once.
+	#Default is 32.
+	#This is naturally sub-limited by the number of available backends.
+	#This is a protection for many-backend servers, to guarantee one user cannot steal all backends at once.
+	#You can set this to a very low value if you have few backends but many users.
+	#Set this to a very high value if you have many backends and no concern for their distribution.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxT2ISimultaneous: 32
+	#Whether the '.' symbol can be used in OutPath - if enabled, users may cause file system issues or perform folder escapes.
+	AllowUnsafeOutpaths: false
+	#Human readable display name for this role.
+	Name: Owner
+	#Human-readable description text about this role.
+	#This is for admin reference when picking roles.
+	#Probably describe here when/why a user should receive this role, and a short bit about what it unlocks.
+	Description: (Auto Generated Role, cannot delete). The owner of the server, local user when account system is disabled. Generally should have all permissions ever always.
+admin:
+	#How many directories deep a user's custom OutPath can be.
+	#Default is 5.
+	#This is just a minor protection to avoid filesystem corruption. Higher values are perfectly fine in most cases.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxOutPathDepth: 5
+	#What models are allowed, as a list of prefixes.
+	#For example 'sdxl/' allows only models in the SDXL folder.
+	#Or, 'sdxl/,flux/' allows models in the SDXL or Flux folders.
+	#If empty, no whitelist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add whitelist entries together.
+	ModelWhitelist:
+	#What models are forbidden, as a list of prefixes.
+	#For example 'sdxl/' forbids models in the SDXL folder.
+	#Or, 'sdxl/,flux/' forbids models in the SDXL or Flux folders.
+	#If empty, no blacklist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add blacklist entries together.
+	ModelBlacklist:
+	#Generic permission flags. '*' means all (admin).
+	#Default is all.
+	PermissionFlags:
+	- restart
+	- edit_model_metadata
+	- param_backend_type
+	- param_backend_id
+	- use_tokenizer
+	- comfy_read_workflows
+	- interrupt_others
+	- download_models
+	- fundamental_model_access
+	- view_server_tab
+	- comfy_backend_generate
+	- user_star_images
+	- comfy_dynamic_custom_workflows
+	- manage_presets
+	- view_backends_list
+	- comfy_edit_workflows
+	- user_delete_image
+	- view_image_history
+	- add_remove_backends
+	- comfy_stored_custom_workflows
+	- admin_debug
+	- fundamental_generate_tab_access
+	- param_video
+	- delete_models
+	- view_others_outputs
+	- control_model_refresh
+	- read_server_settings
+	- toggle_backends
+	- gridgen_generate_grids
+	- restart_backends
+	- basic_image_generation
+	- comfy_direct_calls
+	- read_user_settings
+	- extra_loras
+	- edit_user_settings
+	- load_models_now
+	- edit_wildcards
+	- install_features
+	- param_controlnet
+	- read_server_info_panels
+	- gridgen_save_grids
+	- edit_params
+	- edit_server_settings
+	- pickle2safetensors
+	- gridgen_read_grids
+	- view_logs
+	- reset_metadata
+	- control_mem_clean
+	- manage_extensions
+	- fundamental
+	- model_params
+	- create_tensorrt
+	- edit_backends
+	- imagebatcher_use_image_batcher
+	- scorersext_use_scorers
+	#How many images this user can have actively generating at once.
+	#Default is 32.
+	#This is naturally sub-limited by the number of available backends.
+	#This is a protection for many-backend servers, to guarantee one user cannot steal all backends at once.
+	#You can set this to a very low value if you have few backends but many users.
+	#Set this to a very high value if you have many backends and no concern for their distribution.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxT2ISimultaneous: 32
+	#Whether the '.' symbol can be used in OutPath - if enabled, users may cause file system issues or perform folder escapes.
+	AllowUnsafeOutpaths: false
+	#Human readable display name for this role.
+	Name: Admin
+	#Human-readable description text about this role.
+	#This is for admin reference when picking roles.
+	#Probably describe here when/why a user should receive this role, and a short bit about what it unlocks.
+	Description: (Auto Generated Role, cannot delete). An administrator of the server, has near-total control.
+poweruser:
+	#How many directories deep a user's custom OutPath can be.
+	#Default is 5.
+	#This is just a minor protection to avoid filesystem corruption. Higher values are perfectly fine in most cases.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxOutPathDepth: 5
+	#What models are allowed, as a list of prefixes.
+	#For example 'sdxl/' allows only models in the SDXL folder.
+	#Or, 'sdxl/,flux/' allows models in the SDXL or Flux folders.
+	#If empty, no whitelist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add whitelist entries together.
+	ModelWhitelist:
+	#What models are forbidden, as a list of prefixes.
+	#For example 'sdxl/' forbids models in the SDXL folder.
+	#Or, 'sdxl/,flux/' forbids models in the SDXL or Flux folders.
+	#If empty, no blacklist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add blacklist entries together.
+	ModelBlacklist:
+	#Generic permission flags. '*' means all (admin).
+	#Default is all.
+	PermissionFlags:
+	- edit_model_metadata
+	- param_backend_type
+	- param_backend_id
+	- use_tokenizer
+	- comfy_read_workflows
+	- download_models
+	- fundamental_model_access
+	- view_server_tab
+	- comfy_backend_generate
+	- user_star_images
+	- comfy_dynamic_custom_workflows
+	- manage_presets
+	- view_backends_list
+	- comfy_edit_workflows
+	- user_delete_image
+	- view_image_history
+	- comfy_stored_custom_workflows
+	- fundamental_generate_tab_access
+	- param_video
+	- delete_models
+	- control_model_refresh
+	- gridgen_generate_grids
+	- restart_backends
+	- basic_image_generation
+	- comfy_direct_calls
+	- read_user_settings
+	- extra_loras
+	- edit_user_settings
+	- load_models_now
+	- edit_wildcards
+	- install_features
+	- param_controlnet
+	- gridgen_save_grids
+	- edit_params
+	- pickle2safetensors
+	- gridgen_read_grids
+	- reset_metadata
+	- control_mem_clean
+	- fundamental
+	- model_params
+	- create_tensorrt
+	- scorersext_use_scorers
+	#How many images this user can have actively generating at once.
+	#Default is 32.
+	#This is naturally sub-limited by the number of available backends.
+	#This is a protection for many-backend servers, to guarantee one user cannot steal all backends at once.
+	#You can set this to a very low value if you have few backends but many users.
+	#Set this to a very high value if you have many backends and no concern for their distribution.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxT2ISimultaneous: 32
+	#Whether the '.' symbol can be used in OutPath - if enabled, users may cause file system issues or perform folder escapes.
+	AllowUnsafeOutpaths: false
+	#Human readable display name for this role.
+	Name: PowerUser
+	#Human-readable description text about this role.
+	#This is for admin reference when picking roles.
+	#Probably describe here when/why a user should receive this role, and a short bit about what it unlocks.
+	Description: (Auto Generated Role, cannot delete). A very advanced, and trusted, user. Has access to things that could be dangerous or can be maliciously abused.
+user:
+	#How many directories deep a user's custom OutPath can be.
+	#Default is 5.
+	#This is just a minor protection to avoid filesystem corruption. Higher values are perfectly fine in most cases.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxOutPathDepth: 5
+	#What models are allowed, as a list of prefixes.
+	#For example 'sdxl/' allows only models in the SDXL folder.
+	#Or, 'sdxl/,flux/' allows models in the SDXL or Flux folders.
+	#If empty, no whitelist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add whitelist entries together.
+	ModelWhitelist:
+	#What models are forbidden, as a list of prefixes.
+	#For example 'sdxl/' forbids models in the SDXL folder.
+	#Or, 'sdxl/,flux/' forbids models in the SDXL or Flux folders.
+	#If empty, no blacklist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add blacklist entries together.
+	ModelBlacklist:
+	#Generic permission flags. '*' means all (admin).
+	#Default is all.
+	PermissionFlags:
+	- use_tokenizer
+	- fundamental_model_access
+	- user_star_images
+	- manage_presets
+	- user_delete_image
+	- view_image_history
+	- fundamental_generate_tab_access
+	- param_video
+	- gridgen_generate_grids
+	- basic_image_generation
+	- read_user_settings
+	- edit_user_settings
+	- param_controlnet
+	- gridgen_save_grids
+	- edit_params
+	- gridgen_read_grids
+	- fundamental
+	- model_params
+	#How many images this user can have actively generating at once.
+	#Default is 32.
+	#This is naturally sub-limited by the number of available backends.
+	#This is a protection for many-backend servers, to guarantee one user cannot steal all backends at once.
+	#You can set this to a very low value if you have few backends but many users.
+	#Set this to a very high value if you have many backends and no concern for their distribution.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxT2ISimultaneous: 32
+	#Whether the '.' symbol can be used in OutPath - if enabled, users may cause file system issues or perform folder escapes.
+	AllowUnsafeOutpaths: false
+	#Human readable display name for this role.
+	Name: User
+	#Human-readable description text about this role.
+	#This is for admin reference when picking roles.
+	#Probably describe here when/why a user should receive this role, and a short bit about what it unlocks.
+	Description: (Auto Generated Role, cannot delete). A general user. The default role for valid accounts.
+guest:
+	#How many directories deep a user's custom OutPath can be.
+	#Default is 5.
+	#This is just a minor protection to avoid filesystem corruption. Higher values are perfectly fine in most cases.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxOutPathDepth: 5
+	#What models are allowed, as a list of prefixes.
+	#For example 'sdxl/' allows only models in the SDXL folder.
+	#Or, 'sdxl/,flux/' allows models in the SDXL or Flux folders.
+	#If empty, no whitelist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add whitelist entries together.
+	ModelWhitelist:
+	#What models are forbidden, as a list of prefixes.
+	#For example 'sdxl/' forbids models in the SDXL folder.
+	#Or, 'sdxl/,flux/' forbids models in the SDXL or Flux folders.
+	#If empty, no blacklist logic is applied.
+	#Note that blacklist is 'more powerful' than whitelist and overrides it.
+	#This stacks between roles, roles can add blacklist entries together.
+	ModelBlacklist:
+	#Generic permission flags. '*' means all (admin).
+	#Default is all.
+	PermissionFlags:
+	- use_tokenizer
+	- fundamental_model_access
+	- fundamental_generate_tab_access
+	- read_user_settings
+	- fundamental
+	#How many images this user can have actively generating at once.
+	#Default is 32.
+	#This is naturally sub-limited by the number of available backends.
+	#This is a protection for many-backend servers, to guarantee one user cannot steal all backends at once.
+	#You can set this to a very low value if you have few backends but many users.
+	#Set this to a very high value if you have many backends and no concern for their distribution.
+	#The actual limit applied to a user is whatever the highest value of all their roles is.
+	MaxT2ISimultaneous: 32
+	#Whether the '.' symbol can be used in OutPath - if enabled, users may cause file system issues or perform folder escapes.
+	AllowUnsafeOutpaths: false
+	#Human readable display name for this role.
+	Name: Guest
+	#Human-readable description text about this role.
+	#This is for admin reference when picking roles.
+	#Probably describe here when/why a user should receive this role, and a short bit about what it unlocks.
+	Description: (Auto Generated Role, cannot delete). An unregistered or unverified guest account. Only when public unverified access is enabled.
+___$tracked:
+- configure_roles
+- restart
+- edit_model_metadata
+- param_backend_type
+- param_backend_id
+- install
+- use_tokenizer
+- comfy_read_workflows
+- interrupt_others
+- download_models
+- fundamental_model_access
+- view_server_tab
+- comfy_backend_generate
+- user_star_images
+- comfy_dynamic_custom_workflows
+- manage_presets
+- view_backends_list
+- comfy_edit_workflows
+- user_delete_image
+- view_image_history
+- server_debug_message
+- add_remove_backends
+- comfy_stored_custom_workflows
+- shutdown
+- admin_debug
+- local_image_folder
+- fundamental_generate_tab_access
+- param_video
+- delete_models
+- view_others_outputs
+- control_model_refresh
+- read_server_settings
+- toggle_backends
+- gridgen_generate_grids
+- restart_backends
+- manage_users
+- basic_image_generation
+- automated_control
+- comfy_direct_calls
+- read_user_settings
+- extra_loras
+- edit_user_settings
+- load_models_now
+- edit_wildcards
+- install_features
+- param_controlnet
+- read_server_info_panels
+- *
+- gridgen_save_grids
+- edit_params
+- edit_server_settings
+- pickle2safetensors
+- gridgen_read_grids
+- view_logs
+- reset_metadata
+- control_mem_clean
+- manage_extensions
+- fundamental
+- model_params
+- create_tensorrt
+- edit_backends
+- imagebatcher_use_image_batcher
+- scorersext_use_scorers
