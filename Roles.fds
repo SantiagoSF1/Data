@@ -22,66 +22,69 @@ owner:
 	#Default is all.
 	PermissionFlags:
 	- *
-	- configure_roles
-	- restart
-	- edit_model_metadata
-	- param_backend_type
-	- param_backend_id
-	- install
-	- use_tokenizer
-	- comfy_read_workflows
-	- interrupt_others
-	- download_models
-	- fundamental_model_access
-	- view_server_tab
-	- comfy_backend_generate
-	- user_star_images
-	- comfy_dynamic_custom_workflows
-	- manage_presets
-	- view_backends_list
-	- comfy_edit_workflows
-	- user_delete_image
-	- view_image_history
-	- server_debug_message
-	- add_remove_backends
-	- comfy_stored_custom_workflows
 	- shutdown
-	- admin_debug
-	- local_image_folder
-	- fundamental_generate_tab_access
-	- param_video
-	- delete_models
-	- view_others_outputs
-	- control_model_refresh
-	- read_server_settings
-	- toggle_backends
-	- gridgen_generate_grids
-	- restart_backends
-	- manage_users
-	- basic_image_generation
-	- automated_control
-	- comfy_direct_calls
-	- read_user_settings
-	- extra_loras
-	- edit_user_settings
-	- load_models_now
 	- edit_wildcards
-	- install_features
-	- param_controlnet
-	- read_server_info_panels
-	- gridgen_save_grids
-	- edit_params
-	- edit_server_settings
-	- pickle2safetensors
+	- comfy_backend_generate
 	- gridgen_read_grids
-	- view_logs
 	- reset_metadata
+	- read_user_settings
+	- toggle_backends
+	- add_remove_backends
+	- read_server_info_panels
+	- comfy_direct_calls
+	- user_tab
+	- param_backend_type
+	- fundamental_generate_tab_access
+	- comfy_dynamic_custom_workflows
+	- edit_user_settings
+	- extra_loras
+	- restart_backends
+	- pickle2safetensors
+	- simple_tab
+	- user_delete_image
+	- edit_server_settings
+	- local_image_folder
+	- view_server_tab
 	- control_mem_clean
-	- manage_extensions
+	- gridgen_generate_grids
+	- use_tokenizer
+	- interrupt_others
+	- restart
 	- fundamental
-	- model_params
-	- create_tensorrt
+	- comfy_stored_custom_workflows
+	- view_image_history
+	- view_others_outputs
 	- edit_backends
+	- manage_extensions
+	- comfy_read_workflows
+	- user_star_images
+	- download_models
+	- server_debug_message
+	- fundamental_model_access
+	- delete_models
+	- admin_debug
+	- gridgen_save_grids
+	- manage_presets
+	- edit_params
+	- automated_control
+	- model_params
+	- edit_model_metadata
+	- param_controlnet
+	- param_backend_id
+	- utilities_tab
+	- create_tensorrt
+	- view_logs
+	- basic_image_generation
+	- param_video
+	- comfy_edit_workflows
+	- configure_roles
+	- manage_users
+	- load_models_now
+	- install
+	- read_server_settings
+	- view_backends_list
+	- install_features
+	- control_model_refresh
 	- imagebatcher_use_image_batcher
 	- scorersext_use_scorers
 	#How many images this user can have actively generating at once.
@@ -123,59 +126,62 @@ admin:
 	#Generic permission flags. '*' means all (admin).
 	#Default is all.
 	PermissionFlags:
-	- restart
-	- edit_model_metadata
+	- edit_wildcards
+	- comfy_backend_generate
+	- gridgen_read_grids
+	- reset_metadata
+	- read_user_settings
+	- toggle_backends
+	- add_remove_backends
+	- read_server_info_panels
+	- comfy_direct_calls
+	- user_tab
 	- param_backend_type
-	- param_backend_id
+	- fundamental_generate_tab_access
+	- comfy_dynamic_custom_workflows
+	- edit_user_settings
+	- extra_loras
+	- restart_backends
+	- pickle2safetensors
+	- simple_tab
+	- user_delete_image
+	- edit_server_settings
+	- view_server_tab
+	- control_mem_clean
+	- gridgen_generate_grids
 	- use_tokenizer
-	- comfy_read_workflows
 	- interrupt_others
+	- restart
+	- fundamental
+	- comfy_stored_custom_workflows
+	- view_image_history
+	- view_others_outputs
+	- edit_backends
+	- manage_extensions
+	- comfy_read_workflows
+	- user_star_images
 	- download_models
 	- fundamental_model_access
-	- view_server_tab
-	- comfy_backend_generate
-	- user_star_images
-	- comfy_dynamic_custom_workflows
-	- manage_presets
-	- view_backends_list
-	- comfy_edit_workflows
-	- user_delete_image
-	- view_image_history
-	- add_remove_backends
-	- comfy_stored_custom_workflows
-	- admin_debug
-	- fundamental_generate_tab_access
-	- param_video
 	- delete_models
-	- view_others_outputs
-	- control_model_refresh
-	- read_server_settings
-	- toggle_backends
-	- gridgen_generate_grids
-	- restart_backends
-	- basic_image_generation
-	- comfy_direct_calls
-	- read_user_settings
-	- extra_loras
-	- edit_user_settings
-	- load_models_now
-	- edit_wildcards
-	- install_features
-	- param_controlnet
-	- read_server_info_panels
+	- admin_debug
 	- gridgen_save_grids
+	- manage_presets
 	- edit_params
-	- edit_server_settings
-	- pickle2safetensors
-	- gridgen_read_grids
-	- view_logs
-	- reset_metadata
-	- control_mem_clean
-	- manage_extensions
-	- fundamental
 	- model_params
+	- edit_model_metadata
+	- param_controlnet
+	- param_backend_id
+	- utilities_tab
 	- create_tensorrt
-	- edit_backends
+	- view_logs
+	- basic_image_generation
+	- param_video
+	- comfy_edit_workflows
+	- load_models_now
+	- read_server_settings
+	- view_backends_list
+	- install_features
+	- control_model_refresh
 	- imagebatcher_use_image_batcher
 	- scorersext_use_scorers
 	#How many images this user can have actively generating at once.
@@ -217,47 +223,50 @@ poweruser:
 	#Generic permission flags. '*' means all (admin).
 	#Default is all.
 	PermissionFlags:
-	- edit_model_metadata
-	- param_backend_type
-	- param_backend_id
-	- use_tokenizer
-	- comfy_read_workflows
-	- download_models
-	- fundamental_model_access
-	- view_server_tab
-	- comfy_backend_generate
-	- user_star_images
-	- comfy_dynamic_custom_workflows
-	- manage_presets
-	- view_backends_list
-	- comfy_edit_workflows
-	- user_delete_image
-	- view_image_history
-	- comfy_stored_custom_workflows
-	- fundamental_generate_tab_access
-	- param_video
-	- delete_models
-	- control_model_refresh
-	- gridgen_generate_grids
-	- restart_backends
-	- basic_image_generation
-	- comfy_direct_calls
-	- read_user_settings
-	- extra_loras
-	- edit_user_settings
-	- load_models_now
 	- edit_wildcards
-	- install_features
-	- param_controlnet
-	- gridgen_save_grids
-	- edit_params
-	- pickle2safetensors
+	- comfy_backend_generate
 	- gridgen_read_grids
 	- reset_metadata
+	- read_user_settings
+	- comfy_direct_calls
+	- user_tab
+	- param_backend_type
+	- fundamental_generate_tab_access
+	- comfy_dynamic_custom_workflows
+	- edit_user_settings
+	- extra_loras
+	- restart_backends
+	- pickle2safetensors
+	- simple_tab
+	- user_delete_image
+	- view_server_tab
 	- control_mem_clean
+	- gridgen_generate_grids
+	- use_tokenizer
 	- fundamental
+	- comfy_stored_custom_workflows
+	- view_image_history
+	- comfy_read_workflows
+	- user_star_images
+	- download_models
+	- fundamental_model_access
+	- delete_models
+	- gridgen_save_grids
+	- manage_presets
+	- edit_params
 	- model_params
+	- edit_model_metadata
+	- param_controlnet
+	- param_backend_id
+	- utilities_tab
 	- create_tensorrt
+	- basic_image_generation
+	- param_video
+	- comfy_edit_workflows
+	- load_models_now
+	- view_backends_list
+	- install_features
+	- control_model_refresh
 	- scorersext_use_scorers
 	#How many images this user can have actively generating at once.
 	#Default is 32.
@@ -298,24 +307,27 @@ user:
 	#Generic permission flags. '*' means all (admin).
 	#Default is all.
 	PermissionFlags:
-	- use_tokenizer
-	- fundamental_model_access
-	- user_star_images
-	- manage_presets
-	- user_delete_image
-	- view_image_history
-	- fundamental_generate_tab_access
-	- param_video
-	- gridgen_generate_grids
-	- basic_image_generation
-	- read_user_settings
-	- edit_user_settings
-	- param_controlnet
-	- gridgen_save_grids
-	- edit_params
 	- gridgen_read_grids
+	- read_user_settings
+	- user_tab
+	- fundamental_generate_tab_access
+	- edit_user_settings
+	- simple_tab
+	- user_delete_image
+	- gridgen_generate_grids
+	- use_tokenizer
 	- fundamental
+	- view_image_history
+	- user_star_images
+	- fundamental_model_access
+	- gridgen_save_grids
+	- manage_presets
+	- edit_params
 	- model_params
+	- param_controlnet
+	- utilities_tab
+	- basic_image_generation
+	- param_video
 	#How many images this user can have actively generating at once.
 	#Default is 32.
 	#This is naturally sub-limited by the number of available backends.
@@ -355,11 +367,11 @@ guest:
 	#Generic permission flags. '*' means all (admin).
 	#Default is all.
 	PermissionFlags:
-	- use_tokenizer
-	- fundamental_model_access
-	- fundamental_generate_tab_access
 	- read_user_settings
+	- fundamental_generate_tab_access
+	- use_tokenizer
 	- fundamental
+	- fundamental_model_access
 	#How many images this user can have actively generating at once.
 	#Default is 32.
 	#This is naturally sub-limited by the number of available backends.
@@ -377,66 +389,69 @@ guest:
 	#Probably describe here when/why a user should receive this role, and a short bit about what it unlocks.
 	Description: (Auto Generated Role, cannot delete). An unregistered or unverified guest account. Only when public unverified access is enabled.
 ___$tracked:
-- configure_roles
-- restart
-- edit_model_metadata
-- param_backend_type
-- param_backend_id
-- install
-- use_tokenizer
-- comfy_read_workflows
-- interrupt_others
-- download_models
-- fundamental_model_access
-- view_server_tab
-- comfy_backend_generate
-- user_star_images
-- comfy_dynamic_custom_workflows
-- manage_presets
-- view_backends_list
-- comfy_edit_workflows
-- user_delete_image
-- view_image_history
-- server_debug_message
-- add_remove_backends
-- comfy_stored_custom_workflows
 - shutdown
-- admin_debug
-- local_image_folder
-- fundamental_generate_tab_access
-- param_video
-- delete_models
-- view_others_outputs
-- control_model_refresh
-- read_server_settings
-- toggle_backends
-- gridgen_generate_grids
-- restart_backends
-- manage_users
-- basic_image_generation
-- automated_control
-- comfy_direct_calls
-- read_user_settings
-- extra_loras
-- edit_user_settings
-- load_models_now
 - edit_wildcards
-- install_features
-- param_controlnet
-- read_server_info_panels
-- *
-- gridgen_save_grids
-- edit_params
-- edit_server_settings
-- pickle2safetensors
+- comfy_backend_generate
 - gridgen_read_grids
-- view_logs
 - reset_metadata
+- read_user_settings
+- toggle_backends
+- add_remove_backends
+- read_server_info_panels
+- comfy_direct_calls
+- user_tab
+- param_backend_type
+- fundamental_generate_tab_access
+- comfy_dynamic_custom_workflows
+- edit_user_settings
+- extra_loras
+- restart_backends
+- pickle2safetensors
+- simple_tab
+- user_delete_image
+- edit_server_settings
+- local_image_folder
+- view_server_tab
 - control_mem_clean
-- manage_extensions
+- gridgen_generate_grids
+- use_tokenizer
+- interrupt_others
+- restart
 - fundamental
-- model_params
-- create_tensorrt
+- comfy_stored_custom_workflows
+- view_image_history
+- view_others_outputs
 - edit_backends
+- manage_extensions
+- comfy_read_workflows
+- user_star_images
+- download_models
+- server_debug_message
+- fundamental_model_access
+- delete_models
+- admin_debug
+- gridgen_save_grids
+- manage_presets
+- edit_params
+- automated_control
+- model_params
+- edit_model_metadata
+- param_controlnet
+- param_backend_id
+- utilities_tab
+- create_tensorrt
+- view_logs
+- basic_image_generation
+- param_video
+- comfy_edit_workflows
+- configure_roles
+- manage_users
+- *
+- load_models_now
+- install
+- read_server_settings
+- view_backends_list
+- install_features
+- control_model_refresh
 - imagebatcher_use_image_batcher
 - scorersext_use_scorers

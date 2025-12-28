@@ -1,13 +1,13 @@
 0:
 	type: comfyui_selfstart
-	title: ComfyUI Self-Starting
+	title: \x
 	enabled: true
 	settings:
 		#The location of the 'main.py' file. Can be an absolute or relative path, but must end with 'main.py'.
 		#If you used the installer, this should be 'dlbackend/comfy/ComfyUI/main.py'.
 		StartScript: dlbackend/ComfyUI/main.py
 		#Any arguments to include in the launch script.
-		ExtraArgs: --disable-async-offload
+		ExtraArgs: \x
 		#If unchecked, the system will automatically add some relevant arguments to the comfy launch. If checked, automatic args (other than port) won't be added.
 		DisableInternalArgs: false
 		#Whether the Comfy backend should automatically update itself during launch.

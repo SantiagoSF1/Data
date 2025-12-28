@@ -33,7 +33,7 @@ Paths:
 	#Defaults to 'controlnet'.
 	#Absolute paths work too (usually do not use an absolute path, use just a folder name).
 	#Use a semicolon ';' to split multiple paths.
-	SDControlNetsFolder: controlnet
+	SDControlNetsFolder: controlnet;model_patches
 	#The CLIP (Text Encoder) model folder to use within 'ModelRoot'.
 	#Defaults to 'text_encoders;clip'.
 	#Absolute paths work too (usually do not use an absolute path, use just a folder name).
@@ -289,6 +289,10 @@ DefaultUser:
 		#If disabled, shifting will simply stop at the ends.
 		#If 'only arrow keys', cycling happens when you press the arrow keys, but not other actions (eg deleting an image will not cycle).
 		ImageShiftingCycles: true
+		#If enabled, metadata will be hidden in the image Full View by default.
+		#If disabled, metadata will be shown by default.
+		#You zoom still zoom in or out to show or hide the metadata at any time as usual.
+		DefaultHideMetadataInFullview: false
 	#Settings related to the parsing of generation parameters.
 	ParamParsing:
 		#Whether LoRAs can be added to a generation multiple times.
@@ -345,6 +349,8 @@ DefaultUser:
 		DefaultSVDVAE: None
 		#What VAE to use with Flux models by default.
 		DefaultFluxVAE: None
+		#What VAE to use with Flux2 models by default.
+		DefaultFlux2VAE: None
 		#What VAE to use with SD3 models by default.
 		DefaultSD3VAE: None
 		#What VAE to use with Mochi Text2Video models by default.
@@ -460,9 +466,9 @@ Backends:
 #If this is set to 'true', hides the installer page. If 'false', the installer page will be shown.
 IsInstalled: true
 #The date that this instance was installed.
-InstallDate: 2025-11-28
+InstallDate: 2025-12-28
 #The SwarmUI version that this instance was installed as.
-InstallVersion: 0.9.7.2
+InstallVersion: 0.9.7.3
 #Ratelimit, in milliseconds, between Nvidia GPU status queries. Default is 1000 ms (1 second).
 NvidiaQueryRateLimitMS: 1000
 #How to launch the UI. If 'none', just quietly launch.
